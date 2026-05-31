@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../game/cat_bomber_game.dart';
 import '../game/core/constants.dart';
 import '../game/levels/level_registry.dart';
+import '../game/networking/websocket_client.dart';
 import 'widgets/touch_controls.dart';
 import 'widgets/hud_overlay.dart';
 import 'widgets/result_overlay.dart';
@@ -13,11 +14,17 @@ class GameScreen extends StatefulWidget {
   final GameMode mode;
   final int levelIndex;
   final String playerCharacter;
+  final GameSocket? socket;
+  final String? myPlayerId;
+  final String? roomId;
   const GameScreen({
     super.key,
     required this.mode,
     required this.levelIndex,
     this.playerCharacter = 'male_cat',
+    this.socket,
+    this.myPlayerId,
+    this.roomId,
   });
 
   @override
@@ -40,6 +47,9 @@ class _GameScreenState extends State<GameScreen> {
         mode: widget.mode,
         levelIndex: level,
         playerCharacter: widget.playerCharacter,
+        socket: widget.socket,
+        myPlayerId: widget.myPlayerId,
+        roomId: widget.roomId,
         onEnd: (r) => setState(() => _result = r),
       );
 

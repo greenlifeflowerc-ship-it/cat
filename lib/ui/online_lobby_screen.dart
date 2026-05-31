@@ -10,10 +10,10 @@ import '../services/save_service.dart';
 import 'game_screen.dart';
 import 'widgets/pixel_button.dart';
 
-/// Online lobby: connects to the configured WebSocket server, then lets the
-/// player create or join a co-op room. On a successful room_state the match
-/// starts. Falls back to a local fake socket for development if the real server
-/// is unreachable.
+/// Online lobby: connect to the configured WebSocket server, then create or
+/// join a co-op room. The server assigns player_1 (male/host) or player_2
+/// (female/client); on `start` the match begins with that role. A local fake
+/// socket is available for development when the real server is unreachable.
 class OnlineLobbyScreen extends StatefulWidget {
   const OnlineLobbyScreen({super.key});
 
@@ -29,19 +29,28 @@ class _OnlineLobbyScreenState extends State<OnlineLobbyScreen> {
   StreamSubscription? _msgSub;
   StreamSubscription? _statusSub;
 
+  String? _playerId;
+  String _character = 'male_cat';
+  String? _roomId;
+  String? _roomCode;
+  bool _launched = false;
+
   void _append(String s) => setState(() => _log = '$s\n$_log');
 
   Future<void> _connect({bool fake = false}) async {
     await _teardown();
+    _launched = false;
     final socket = fake ? FakeWebSocketClient() : WebSocketClient();
     _socket = socket;
     _statusSub = socket.statusStream.listen((s) {
+      if (!mounted) return;
       setState(() => _status = s);
       _append('status: ${s.name}');
     });
     _msgSub = socket.messages.listen(_onMessage);
     _append('connecting to ${fake ? "local dev socket" : NetworkConfig.defaultUrl}');
     await socket.connect();
+    if (!mounted) return;
     setState(() => _status = socket.status);
     if (socket.status == ConnectionStatus.connected) {
       socket.send(ClientMessages.hello(
@@ -55,20 +64,56 @@ class _OnlineLobbyScreenState extends State<OnlineLobbyScreen> {
   }
 
   void _onMessage(Map<String, dynamic> msg) {
-    _append('recv: ${msg['type']}');
-    if (msg['type'] == ServerMessageType.roomState) {
-      _startMatch();
+    switch (msg['type']) {
+      case 'assigned':
+        _playerId = msg['playerId'] as String?;
+        _character = msg['character'] as String? ?? 'male_cat';
+        _roomId = msg['roomId'] as String?;
+        _roomCode = msg['roomCode'] as String?;
+        _append('you are $_playerId ($_character), room $_roomCode');
+        break;
+      case ServerMessageType.roomState:
+        _roomId = msg['roomId'] as String? ?? _roomId;
+        _roomCode = msg['roomCode'] as String? ?? _roomCode;
+        final n = (msg['players'] as List?)?.length ?? 0;
+        _append('room_state: $n player(s)');
+        break;
+      case 'start':
+        _startMatch(msg);
+        break;
+      case 'error':
+        _append('error: ${msg['message'] ?? msg['code']}');
+        break;
+      default:
+        _append('recv: ${msg['type']}');
     }
   }
 
-  void _startMatch() {
-    if (!mounted) return;
+  void _startMatch(Map<String, dynamic> msg) {
+    if (_launched || !mounted) return;
+    _launched = true;
+    final levelId = msg['levelId'] as String? ?? 'level_01';
+    final levelIndex = int.tryParse(
+            RegExp(r'(\d+)').firstMatch(levelId)?.group(1) ?? '1') ??
+        1;
+    final isHost = _playerId == 'player_1';
+
+    // Hand the live socket to the match. The lobby stops listening so the
+    // game's OnlineSync becomes the sole consumer.
+    _msgSub?.cancel();
+    _statusSub?.cancel();
+    final socket = _socket!;
+
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (_) => const GameScreen(
-          mode: GameMode.onlineClient,
-          levelIndex: 1,
+        builder: (_) => GameScreen(
+          mode: isHost ? GameMode.onlineHost : GameMode.onlineClient,
+          levelIndex: levelIndex,
+          playerCharacter: _character,
+          socket: socket,
+          myPlayerId: _playerId ?? 'player_1',
+          roomId: _roomId ?? '',
         ),
       ),
     );
@@ -87,7 +132,7 @@ class _OnlineLobbyScreenState extends State<OnlineLobbyScreen> {
   Future<void> _teardown() async {
     await _msgSub?.cancel();
     await _statusSub?.cancel();
-    await _socket?.close();
+    if (!_launched) await _socket?.close();
     _socket = null;
   }
 
@@ -124,6 +169,12 @@ class _OnlineLobbyScreenState extends State<OnlineLobbyScreen> {
           children: [
             Text('Server: ${NetworkConfig.defaultUrl}',
                 style: const TextStyle(color: Colors.white54, fontSize: 11)),
+            if (_roomCode != null)
+              Text('Room: $_roomCode  •  you: ${_playerId ?? "?"}',
+                  style: const TextStyle(
+                      color: Color(0xFFffd34d),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 13)),
             const SizedBox(height: 10),
             Wrap(
               spacing: 12,

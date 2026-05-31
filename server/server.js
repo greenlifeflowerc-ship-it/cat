@@ -23,12 +23,10 @@ const { WebSocketServer } = require('ws');
 
 const PORT = parseInt(process.env.PORT || '8080', 10);
 const WS_PATH = process.env.WS_PATH || '/ws';
-const TICK_RATE = 20; // snapshots per second
 
 /** roomId -> room */
 const rooms = new Map();
 let roomSeq = 0;
-let tickSeq = 0;
 
 function now() {
   return Date.now();
@@ -128,17 +126,6 @@ function removeFromRoom(client) {
   }, 15000);
 }
 
-function snapshot(room) {
-  return {
-    type: 'snapshot',
-    tick: tickSeq,
-    serverTime: now(),
-    players: room.players
-      .filter((p) => p.lastState)
-      .map((p) => ({ id: p.playerId, ...p.lastState })),
-  };
-}
-
 const server = http.createServer((req, res) => {
   // Simple health check for load balancers / manual curl.
   if (req.url === '/health') {
@@ -181,6 +168,13 @@ function handleMessage(ws, msg) {
 
     case 'create_room': {
       const room = createRoom(ws, msg.levelId);
+      send(ws, {
+        type: 'assigned',
+        playerId: ws.playerId,
+        character: ws.character,
+        roomId: room.id,
+        roomCode: room.code,
+      });
       send(ws, roomStateMessage(room));
       break;
     }
@@ -201,38 +195,33 @@ function handleMessage(ws, msg) {
         room.pauseTimer = null;
       }
       addPlayer(room, ws);
-      // Both players present -> notify everyone and start.
+      send(ws, {
+        type: 'assigned',
+        playerId: ws.playerId,
+        character: ws.character,
+        roomId: room.id,
+        roomCode: room.code,
+      });
+      // Both players present -> notify everyone and start the match.
       broadcast(room, roomStateMessage(room));
       room.started = true;
+      broadcast(room, { type: 'start', levelId: room.levelId });
       break;
     }
 
-    case 'input': {
-      // Relay raw input to the partner for responsiveness.
-      relayToPartner(ws, msg);
-      break;
-    }
-
-    case 'state': {
-      // Authoritative-lite: remember the sender's latest position/state and
-      // relay it. Expected shape: { x, y, dir, alive, bombsAvailable, ... }.
-      ws.lastState = {
-        x: msg.x,
-        y: msg.y,
-        dir: msg.dir,
-        alive: msg.alive,
-        speed: msg.speed,
-        bombsAvailable: msg.bombsAvailable,
-        bombRange: msg.bombRange,
-      };
+    // Pure relay: forward gameplay traffic to the partner. The host produces
+    // snapshots; the client produces state/events.
+    case 'input':
+    case 'state':
+    case 'snapshot':
+    case 'event': {
       relayToPartner(ws, msg);
       break;
     }
 
     case 'game_end': {
-      // Either client can declare the cooperative result; relay to the room.
       const room = rooms.get(ws.roomId);
-      if (room) broadcast(room, msg);
+      if (room) broadcast(room, msg, ws);
       break;
     }
 
@@ -246,18 +235,9 @@ function relayToPartner(ws, msg) {
   if (!room) return;
   const stamped = { ...msg, fromPlayerId: ws.playerId };
   for (const p of room.players) {
-    if (p !== ws) send(p.ws ? p.ws : p, stamped);
+    if (p !== ws) send(p, stamped);
   }
 }
-
-// Snapshot broadcaster.
-setInterval(() => {
-  tickSeq++;
-  for (const room of rooms.values()) {
-    if (room.players.length === 0) continue;
-    broadcast(room, snapshot(room));
-  }
-}, 1000 / TICK_RATE);
 
 // Heartbeat: drop dead sockets.
 setInterval(() => {

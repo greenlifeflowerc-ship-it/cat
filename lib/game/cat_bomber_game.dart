@@ -20,6 +20,8 @@ import 'components/enemy_component.dart';
 import 'components/bomb_component.dart';
 import 'components/explosion_component.dart';
 import 'components/powerup_component.dart';
+import 'networking/websocket_client.dart';
+import 'networking/online_sync.dart';
 import '../services/audio_service.dart';
 import '../services/save_service.dart';
 
@@ -47,14 +49,28 @@ class CatBomberGame extends FlameGame with KeyboardEvents {
   /// mode the other cat becomes the AI companion.
   final String playerCharacter;
 
+  // Online session wiring (null offline).
+  final GameSocket? socket;
+  final String? myPlayerId;
+  final String? roomId;
+
   CatBomberGame({
     required this.mode,
     required this.levelIndex,
     this.onEnd,
     this.playerCharacter = 'male_cat',
+    this.socket,
+    this.myPlayerId,
+    this.roomId,
   });
 
+  OnlineSync? online;
+
   bool get humanIsMale => playerCharacter == 'male_cat';
+
+  bool get isOnline => mode != GameMode.offline;
+  bool get isHost => mode == GameMode.onlineHost;
+  bool get isClient => mode == GameMode.onlineClient;
 
   /// Offline is a solo run: only the human cat is on the map and the goal is to
   /// reach the meeting-goal tile alone. Online spawns both cats.
@@ -85,6 +101,10 @@ class CatBomberGame extends FlameGame with KeyboardEvents {
   final List<EnemyComponent> _enemies = [];
   final List<ExplosionComponent> _explosions = [];
   final Map<int, PowerUpComponent> _powerups = {};
+
+  // Online client mirrors of host-authoritative world objects.
+  final Map<int, EnemyComponent> _remoteEnemies = {};
+  final Set<int> _clientExplosionCells = {};
 
   // Reusable sprites/animations.
   late SpriteAnimation _bombAnim;
@@ -131,6 +151,15 @@ class CatBomberGame extends FlameGame with KeyboardEvents {
     await _buildMap();
     await _spawnCats();
     await _spawnEnemies();
+
+    if (isOnline && socket != null) {
+      online = OnlineSync(
+        game: this,
+        socket: socket!,
+        myPlayerId: myPlayerId ?? 'player_1',
+        roomId: roomId ?? '',
+      )..start();
+    }
 
     state.value = PlayState.playing;
   }
@@ -216,13 +245,20 @@ class CatBomberGame extends FlameGame with KeyboardEvents {
       companion = null;
       await world.add(human);
     } else {
-      // Online co-op: partner is driven by the network sync layer.
+      // Online co-op: I drive my cat from local input; the partner cat is
+      // interpolated from network snapshots.
       companion = partner;
+      human.networkControlled = false;
+      partner.localControlled = false;
+      partner.aiControlled = false;
+      partner.networkControlled = true;
       await world.addAll([human, partner]);
     }
   }
 
   Future<void> _spawnEnemies() async {
+    // The online client receives enemies from host snapshots, not local sim.
+    if (isClient) return;
     // Place a themed roster on open floor tiles away from both spawns.
     final spots = <(int, int)>[];
     for (var r = 1; r < level.rows - 1; r++) {
@@ -269,15 +305,25 @@ class CatBomberGame extends FlameGame with KeyboardEvents {
     // Consume edge-triggered bomb input for the local cat.
     if (input.placeBomb) {
       input.placeBomb = false;
-      localCat.placeBomb();
+      if (isClient) {
+        online?.sendPlaceBomb();
+      } else {
+        localCat.placeBomb();
+      }
     }
     if (input.remoteDetonate) {
       input.remoteDetonate = false;
-      if (localCat.hasRemoteBomb) _detonateOwnerBombs(localCat);
+      if (!isClient && localCat.hasRemoteBomb) _detonateOwnerBombs(localCat);
     }
 
-    _applyExplosionDamage();
-    _checkWinLose();
+    // The host (and offline) own the authoritative world simulation. The online
+    // client renders host snapshots instead.
+    if (!isClient) {
+      _applyExplosionDamage();
+      _checkWinLose();
+    }
+
+    online?.update(dt);
   }
 
   void _applyExplosionDamage() {
@@ -339,7 +385,206 @@ class CatBomberGame extends FlameGame with KeyboardEvents {
     if (win) {
       await SaveService.instance.recordResult(levelIndex, stars, seconds);
     }
+    // Host tells the client the authoritative result.
+    if (isHost) {
+      online?.sendGameEnd(win: win, seconds: seconds, stars: stars);
+    }
     onEnd?.call(GameResult(win, seconds, stars, score));
+  }
+
+  /// Online client: apply the host's authoritative match result.
+  void handleRemoteEnd(bool win, int seconds, int stars) {
+    if (_ended) return;
+    _ended = true;
+    state.value = win ? PlayState.won : PlayState.lost;
+    AudioService.instance.play(win ? 'level_win' : 'level_lose');
+    onEnd?.call(GameResult(win, seconds, stars, score));
+  }
+
+  /// Host: the remote (client) cat requested a bomb at its current tile.
+  void placeBombForRemote() {
+    if (companion != null) companion!.placeBomb();
+  }
+
+  // ---- Online snapshot (host builds, client applies) --------------------
+
+  Map<String, dynamic> _catSnap(PlayerCat c) => {
+        'id': c.charId,
+        'x': c.position.x,
+        'y': c.position.y,
+        'dir': c.facing.name,
+        'alive': c.alive,
+        'maxBombs': c.maxBombs,
+        'bombRange': c.bombRange,
+        'lives': c.lives,
+        'speed': c.speedTiles,
+      };
+
+  /// Host: serialize the full authoritative world for the client.
+  Map<String, dynamic> buildSnapshot() {
+    final gs = switch (state.value) {
+      PlayState.won => 'won',
+      PlayState.lost => 'lost',
+      _ => 'playing',
+    };
+    return {
+      'type': 'snapshot',
+      'tick': hudTick.value,
+      'cats': [_catSnap(male), _catSnap(female)],
+      'enemies': [
+        for (var i = 0; i < _enemies.length; i++)
+          {
+            'i': i,
+            'type': _enemies[i].type,
+            'x': _enemies[i].position.x,
+            'y': _enemies[i].position.y,
+            'dir': _enemies[i].facing.name,
+            'alive': _enemies[i].alive,
+          }
+      ],
+      'bombs': [
+        for (final b in _bombs.values)
+          {'k': _key(b.col, b.row), 'x': b.position.x, 'y': b.position.y}
+      ],
+      'explosions': [
+        for (final e in _explosions) {'c': e.col, 'r': e.row}
+      ],
+      'blocks': [for (final k in _blocks.keys) k],
+      'powerups': [
+        for (final entry in _powerups.entries)
+          {
+            'k': entry.key,
+            'type': entry.value.type.name,
+            'c': entry.value.col,
+            'r': entry.value.row,
+          }
+      ],
+      'gameState': gs,
+    };
+  }
+
+  /// Client: reconcile local visuals with the host snapshot.
+  Future<void> applySnapshot(Map<String, dynamic> s) async {
+    const tile = GameConfig.tileSize;
+
+    // Cats.
+    for (final cs in (s['cats'] as List)) {
+      final id = cs['id'] as String;
+      final cat = id == male.charId ? male : female;
+      final x = (cs['x'] as num).toDouble();
+      final y = (cs['y'] as num).toDouble();
+      final alive = cs['alive'] == true;
+      if (cat == human) {
+        // Mirror authoritative stats; keep locally-predicted position.
+        cat.maxBombs = cs['maxBombs'] as int;
+        cat.bombRange = cs['bombRange'] as int;
+        cat.lives = cs['lives'] as int;
+        cat.speedTiles = (cs['speed'] as num).toDouble();
+        if (!alive) cat.forceDefeat();
+      } else {
+        cat.applyNetwork(x, y, cs['dir'] as String, alive);
+      }
+    }
+
+    // Enemies.
+    final seenEnemies = <int>{};
+    for (final es in (s['enemies'] as List)) {
+      final i = es['i'] as int;
+      seenEnemies.add(i);
+      final x = (es['x'] as num).toDouble();
+      final y = (es['y'] as num).toDouble();
+      var e = _remoteEnemies[i];
+      if (e == null) {
+        final col = ((x / tile) - 0.5).round();
+        final row = ((y / tile) - 0.5).round();
+        e = EnemyComponent(type: es['type'] as String, col: col, row: row, seed: i)
+          ..remote = true;
+        _remoteEnemies[i] = e;
+        world.add(e);
+      }
+      e.applyNetwork(x, y, es['dir'] as String, es['alive'] == true);
+    }
+    for (final i in _remoteEnemies.keys.toList()) {
+      if (!seenEnemies.contains(i)) {
+        _remoteEnemies.remove(i)!.removeFromParent();
+      }
+    }
+
+    // Bombs.
+    final bombKeys = <int>{};
+    for (final bs in (s['bombs'] as List)) {
+      final k = bs['k'] as int;
+      bombKeys.add(k);
+      if (!_bombs.containsKey(k)) {
+        final x = (bs['x'] as num).toDouble();
+        final y = (bs['y'] as num).toDouble();
+        final b = BombComponent(
+          animation: _bombAnim,
+          col: (x / tile).round(),
+          row: (y / tile).round(),
+          owner: human,
+          range: 1,
+          fuse: 99,
+        )..remote = true;
+        _bombs[k] = b;
+        world.add(b);
+      }
+    }
+    for (final k in _bombs.keys.toList()) {
+      if (!bombKeys.contains(k)) {
+        _bombs.remove(k)!.removeFromParent();
+      }
+    }
+
+    // Breakable blocks: drop any the host has destroyed.
+    final aliveBlocks = {for (final k in (s['blocks'] as List)) k as int};
+    for (final k in _blocks.keys.toList()) {
+      if (!aliveBlocks.contains(k)) {
+        _blocks.remove(k)!.removeFromParent();
+      }
+    }
+
+    // Power-ups.
+    final puKeys = <int>{};
+    for (final ps in (s['powerups'] as List)) {
+      final k = ps['k'] as int;
+      puKeys.add(k);
+      if (!_powerups.containsKey(k)) {
+        final type = PowerUpType.values.firstWhere(
+          (t) => t.name == ps['type'],
+          orElse: () => PowerUpType.speedUp,
+        );
+        final pu = await PowerUpComponent.create(
+            type, ps['c'] as int, ps['r'] as int);
+        _powerups[k] = pu;
+        world.add(pu);
+      }
+    }
+    for (final k in _powerups.keys.toList()) {
+      if (!puKeys.contains(k)) {
+        _powerups.remove(k)!.removeFromParent();
+      }
+    }
+
+    // Explosions: flash newly-appearing cells.
+    final cells = <int>{};
+    for (final xs in (s['explosions'] as List)) {
+      cells.add(_key(xs['c'] as int, xs['r'] as int));
+    }
+    for (final ck in cells) {
+      if (!_clientExplosionCells.contains(ck)) {
+        final c = ck % level.cols;
+        final r = ck ~/ level.cols;
+        world.add(ExplosionComponent(
+          sprite: _explosionSprites['explosion_center']!,
+          col: c,
+          row: r,
+        ));
+      }
+    }
+    _clientExplosionCells
+      ..clear()
+      ..addAll(cells);
   }
 
   void addScore(int base) {
@@ -666,6 +911,12 @@ class CatBomberGame extends FlameGame with KeyboardEvents {
   }
 
   // ---- Pause / keyboard -------------------------------------------------
+
+  @override
+  void onRemove() {
+    online?.dispose();
+    super.onRemove();
+  }
 
   void pauseGame() {
     if (state.value == PlayState.playing) state.value = PlayState.paused;

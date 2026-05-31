@@ -106,7 +106,16 @@ class FakeWebSocketClient implements GameSocket {
 
   @override
   void send(Map<String, dynamic> message) {
-    if (message['type'] == 'create_room' || message['type'] == 'join_room') {
+    final type = message['type'];
+    if (type == 'create_room' || type == 'join_room') {
+      final isHost = type == 'create_room';
+      _messages.add({
+        'type': 'assigned',
+        'playerId': isHost ? 'player_1' : 'player_2',
+        'character': isHost ? 'male_cat' : 'female_cat',
+        'roomId': 'room_local',
+        'roomCode': 'LOCL',
+      });
       _messages.add({
         'type': 'room_state',
         'roomId': 'room_local',
@@ -116,6 +125,8 @@ class FakeWebSocketClient implements GameSocket {
           {'playerId': 'player_2', 'character': 'female_cat', 'ready': true},
         ],
       });
+      // Single-device dev: launch straight into the match (no live partner).
+      _messages.add({'type': 'start', 'levelId': 'level_01'});
     }
   }
 

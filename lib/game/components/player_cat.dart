@@ -19,6 +19,13 @@ class PlayerCat extends SpriteAnimationComponent
   bool localControlled;
   bool aiControlled;
 
+  /// Online: this cat's position is driven by network snapshots, not local
+  /// input or AI. Its movement is interpolated toward the latest received pose.
+  bool networkControlled = false;
+  Vector2? _netPos;
+  Direction _netDir = Direction.down;
+  bool _netAlive = true;
+
   int col;
   int row;
   Direction facing = Direction.down;
@@ -83,9 +90,40 @@ class PlayerCat extends SpriteAnimationComponent
     if (a != null && animation != a) animation = a;
   }
 
+  /// Feed the latest networked pose (centre pixel + facing + alive).
+  void applyNetwork(double x, double y, String dir, bool isAlive) {
+    _netPos = Vector2(x, y);
+    _netDir = directionFromName(dir);
+    _netAlive = isAlive;
+  }
+
+  void _updateNetwork(double dt) {
+    if (!_netAlive) {
+      if (alive) {
+        alive = false;
+        _die();
+      }
+      return;
+    }
+    final target = _netPos;
+    if (target != null) {
+      final t = (12 * dt).clamp(0.0, 1.0);
+      position += (target - position) * t;
+      final moving = (target - position).length > 1.0;
+      facing = _netDir;
+      _setAnim(moving ? 'walk_${facing.name}' : 'idle_${facing.name}');
+    }
+    col = ((position.x / GameConfig.tileSize) - 0.5).round();
+    row = ((position.y / GameConfig.tileSize) - 0.5).round();
+  }
+
   @override
   void update(double dt) {
     super.update(dt);
+    if (networkControlled) {
+      if (alive) _updateNetwork(dt);
+      return;
+    }
     if (!alive) return;
 
     if (shieldTimer > 0) shieldTimer -= dt;
@@ -173,6 +211,13 @@ class PlayerCat extends SpriteAnimationComponent
     alive = false;
     _die();
     return false;
+  }
+
+  /// Online client: force the death visual when the host reports this cat dead.
+  void forceDefeat() {
+    if (!alive) return;
+    alive = false;
+    _die();
   }
 
   Future<void> _die() async {

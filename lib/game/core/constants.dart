@@ -26,6 +26,10 @@ class GameConfig {
 
 enum Direction { up, down, left, right }
 
+Direction directionFromName(String? name) =>
+    Direction.values.firstWhere((d) => d.name == name,
+        orElse: () => Direction.down);
+
 extension DirectionVec on Direction {
   /// Grid delta for this direction.
   (int, int) get delta => switch (this) {

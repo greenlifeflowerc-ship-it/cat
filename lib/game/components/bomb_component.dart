@@ -18,6 +18,10 @@ class BombComponent extends SpriteAnimationComponent
   double fuse;
   bool exploded = false;
 
+  /// Online client: bomb is a visual mirrored from host snapshots; it never
+  /// counts down or detonates locally.
+  bool remote = false;
+
   /// Whether the owner is still standing on the bomb (so they may walk off it).
   bool ownerStanding = true;
 
@@ -42,7 +46,7 @@ class BombComponent extends SpriteAnimationComponent
   @override
   void update(double dt) {
     super.update(dt);
-    if (exploded) return;
+    if (exploded || remote) return;
     fuse -= dt;
     if (fuse <= 0) {
       game.detonateBomb(this);

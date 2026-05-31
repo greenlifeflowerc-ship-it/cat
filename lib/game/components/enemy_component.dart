@@ -23,6 +23,10 @@ class EnemyComponent extends SpriteAnimationComponent
   double _pauseTimer = 0;
   final Random _rng;
 
+  /// Online client: this enemy is a visual driven by host snapshots.
+  bool remote = false;
+  Vector2? _netPos;
+
   // Per-type traits.
   late final double speedTiles;
   late final bool passesBreakable; // ghost
@@ -97,10 +101,29 @@ class EnemyComponent extends SpriteAnimationComponent
     return game.isWalkableForEnemy(c, r, passesBreakable);
   }
 
+  void applyNetwork(double x, double y, String dir, bool isAlive) {
+    _netPos = Vector2(x, y);
+    facing = directionFromName(dir);
+    if (!isAlive && alive) {
+      die();
+    }
+  }
+
   @override
   void update(double dt) {
     super.update(dt);
     if (!alive) return;
+
+    if (remote) {
+      final target = _netPos;
+      if (target != null) {
+        final t = (12 * dt).clamp(0.0, 1.0);
+        position += (target - position) * t;
+        final moving = (target - position).length > 1.0;
+        animation = _anims[moving ? 'move_${facing.name}' : 'idle_${facing.name}'];
+      }
+      return;
+    }
 
     final scale = game.enemyFrozen ? 0.0 : (game.enemySlow ? 0.5 : 1.0);
     if (scale == 0.0) {

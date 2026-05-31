@@ -68,13 +68,27 @@ All art comes from the provided pack, copied verbatim into `assets/game/`
 (snake_case names preserved). Level art is chosen per stage from each level
 JSON's `recommended_assets`.
 
+## Online co-op (real-time)
+
+Fully wired, **host-authoritative**:
+
+- The server assigns **player_1 = male cat (host)** and **player_2 = female cat
+  (client)**, then sends `start`.
+- The **host** simulates the authoritative world (both cats' stats, enemies,
+  bombs, explosions, breakable blocks, power-ups, win/lose) and broadcasts a
+  `snapshot` at 15 Hz.
+- The **client** sends its cat `state` and bomb-place `event`s, predicts its own
+  cat locally for responsiveness, and renders the host's snapshots (partner cat
+  and world objects are interpolated).
+- Win = the two cats meet; the host detects it and sends `game_end` to both.
+  Disconnect triggers the 15-second reconnect grace window on the server.
+
+Run the matching server from [`server/`](server) — it's a pure relay + lobby;
+the host client does the simulation. Use **Dev Socket** in the lobby to launch a
+match on a single device without a backend.
+
 ## Scope notes
 
-- **Online real-time sync** is scaffolded end-to-end (transport, protocol,
-  lobby, connection status, `GameMode.onlineClient/Host`) but the authoritative
-  snapshot-interpolation gameplay loop assumes a live server at
-  `NetworkConfig.defaultUrl`. Use **Dev Socket** in the lobby to exercise the
-  room flow without a backend. Offline single-player co-op is fully playable.
 - Hazard tiles (`H` in the layout) render as floor; the full hazard/puzzle
   object roster has assets and constants in place but only the core maze
   mechanics are simulated.
