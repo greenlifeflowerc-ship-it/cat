@@ -12,17 +12,21 @@ class TouchControls extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(18, 0, 18, 16),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            DPad(input: input),
-            const Spacer(),
-            Row(
+    // Fill the stack and pin the controls to the bottom of the screen.
+    return Positioned.fill(
+      child: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(18, 0, 18, 16),
+          child: Align(
+            alignment: Alignment.bottomCenter,
+            child: Row(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
+                DPad(input: input),
+                const Spacer(),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
                 Padding(
                   padding: const EdgeInsets.only(bottom: 6, right: 14),
                   child: _ActionButton(
@@ -33,15 +37,17 @@ class TouchControls extends StatelessWidget {
                     onPress: () => input.remoteDetonate = true,
                   ),
                 ),
-                _ActionButton(
-                  asset: 'assets/game/ui/bomb_ui_icon.png',
-                  color: const Color(0xFFff5a4d),
-                  size: 92,
-                  onPress: () => input.placeBomb = true,
+                    _ActionButton(
+                      asset: 'assets/game/ui/bomb_ui_icon.png',
+                      color: const Color(0xFFff5a4d),
+                      size: 92,
+                      onPress: () => input.placeBomb = true,
+                    ),
+                  ],
                 ),
               ],
             ),
-          ],
+          ),
         ),
       ),
     );
