@@ -1,0 +1,53 @@
+{
+  "id": "level_10",
+  "name": "Final Castle",
+  "mode": "online_coop",
+  "objective": "Both cats start in opposite corners and must meet on the meeting goal tile.",
+  "grid_size": [
+    15,
+    13
+  ],
+  "tile_size": 128,
+  "legend": {
+    "#": "solid_wall",
+    "B": "breakable_block",
+    ".": "floor",
+    "1": "male_cat_spawn",
+    "2": "female_cat_spawn",
+    "M": "meeting_goal_tile",
+    "H": "hazard"
+  },
+  "spawn_male": [
+    1,
+    1
+  ],
+  "spawn_female": [
+    13,
+    11
+  ],
+  "meeting_goal": [
+    7,
+    6
+  ],
+  "layout": [
+    "###############",
+    "#1..B.BBBBBBBB#",
+    "#.#.#.#B#B#B#B#",
+    "#BBBBB...B...B#",
+    "#B#B#B#.#B#B#B#",
+    "#B...BBBBBBBBB#",
+    "#B#B#.#M#.#B#B#",
+    "#.BB.HB.BBB.BB#",
+    "#B#B#B#B#B#B#B#",
+    "#BBBBBBB.BBBBB#",
+    "#B#B#.#B#B#B#.#",
+    "#.B...B.BBBB.2#",
+    "###############"
+  ],
+  "recommended_assets": {
+    "floor": "tiles/sky_cloud_floor.png",
+    "solid_wall": "blocks/solid_stone_wall.png",
+    "breakable_block": "blocks/breakable_crate.png",
+    "meeting_goal": "objects/meeting_goal_tile.png"
+  }
+}

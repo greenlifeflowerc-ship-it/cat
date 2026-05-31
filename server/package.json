@@ -1,0 +1,16 @@
+{
+  "name": "cat-bomber-server",
+  "version": "1.0.0",
+  "description": "WebSocket co-op server for Cat Bomber: Paw Rescue",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

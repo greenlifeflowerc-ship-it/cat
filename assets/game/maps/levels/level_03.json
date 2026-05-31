@@ -1,0 +1,53 @@
+{
+  "id": "level_03",
+  "name": "Ice Cavern",
+  "mode": "online_coop",
+  "objective": "Both cats start in opposite corners and must meet on the meeting goal tile.",
+  "grid_size": [
+    15,
+    13
+  ],
+  "tile_size": 128,
+  "legend": {
+    "#": "solid_wall",
+    "B": "breakable_block",
+    ".": "floor",
+    "1": "male_cat_spawn",
+    "2": "female_cat_spawn",
+    "M": "meeting_goal_tile",
+    "H": "hazard"
+  },
+  "spawn_male": [
+    1,
+    1
+  ],
+  "spawn_female": [
+    13,
+    11
+  ],
+  "meeting_goal": [
+    7,
+    6
+  ],
+  "layout": [
+    "###############",
+    "#1..B..BB.BB..#",
+    "#.#B#B#B#.#B#B#",
+    "#BBBBB..B.B.BB#",
+    "#B#.#.#B#B#B#B#",
+    "#...B.BBBBBB.B#",
+    "#.#.#B#M#.#.#B#",
+    "#..BB.BHB.BBB.#",
+    "#.#B#B#.#B#B#B#",
+    "#.BBBB.B..B.B.#",
+    "#B#B#.#B#.#.#.#",
+    "#..BB.BB..BB.2#",
+    "###############"
+  ],
+  "recommended_assets": {
+    "floor": "tiles/sand_floor.png",
+    "solid_wall": "blocks/solid_stone_wall.png",
+    "breakable_block": "blocks/breakable_crate.png",
+    "meeting_goal": "objects/meeting_goal_tile.png"
+  }
+}

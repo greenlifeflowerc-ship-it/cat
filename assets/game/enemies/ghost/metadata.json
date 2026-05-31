@@ -1,0 +1,34 @@
+{
+  "id": "ghost",
+  "description": "phase ghost",
+  "move_word": "float",
+  "frame_size": [
+    128,
+    128
+  ],
+  "frames": {
+    "idle_front": "frames/idle_front.png",
+    "idle_back": "frames/idle_back.png",
+    "idle_left": "frames/idle_left.png",
+    "idle_right": "frames/idle_right.png",
+    "float_front_1": "frames/float_front_1.png",
+    "float_front_2": "frames/float_front_2.png",
+    "float_back_1": "frames/float_back_1.png",
+    "float_back_2": "frames/float_back_2.png",
+    "float_left_1": "frames/float_left_1.png",
+    "float_left_2": "frames/float_left_2.png",
+    "float_right_1": "frames/float_right_1.png",
+    "float_right_2": "frames/float_right_2.png",
+    "attack": "frames/attack.png",
+    "hurt": "frames/hurt.png",
+    "defeated": "frames/defeated.png"
+  },
+  "animations": {
+    "move_front": "sheets/move_front.png",
+    "move_back": "sheets/move_back.png",
+    "move_left": "sheets/move_left.png",
+    "move_right": "sheets/move_right.png",
+    "hurt": "sheets/hurt.png",
+    "defeated": "sheets/defeated.png"
+  }
+}

@@ -1,0 +1,4366 @@
+{
+  "meta": {
+    "generator": "cat_bomber_local_asset_factory",
+    "scale": 4,
+    "logical_sprite": 32,
+    "logical_tile": 32
+  },
+  "assets": {
+    "characters/male_cat/frames/idle_front.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/frames/idle_back.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/frames/idle_left.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/frames/idle_right.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/frames/walk_front_1.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/frames/walk_front_2.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/frames/walk_back_1.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/frames/walk_back_2.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/frames/walk_left_1.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/frames/walk_left_2.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/frames/walk_right_1.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/frames/walk_right_2.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/frames/place_bomb.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        144
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/frames/hurt.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/frames/happy.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/frames/defeated.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        116,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/sheets/idle_front.png": {
+      "category": "character_sheets",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        136,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/sheets/idle_back.png": {
+      "category": "character_sheets",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        136,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/sheets/idle_left.png": {
+      "category": "character_sheets",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        136,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/sheets/idle_right.png": {
+      "category": "character_sheets",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        136,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/sheets/walk_front.png": {
+      "category": "character_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/sheets/walk_back.png": {
+      "category": "character_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/sheets/walk_left.png": {
+      "category": "character_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/male_cat/sheets/walk_right.png": {
+      "category": "character_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/frames/idle_front.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/frames/idle_back.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/frames/idle_left.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/frames/idle_right.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/frames/walk_front_1.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/frames/walk_front_2.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/frames/walk_back_1.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/frames/walk_back_2.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/frames/walk_left_1.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/frames/walk_left_2.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/frames/walk_right_1.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/frames/walk_right_2.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/frames/place_bomb.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        144
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/frames/hurt.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/frames/happy.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/frames/defeated.png": {
+      "category": "characters",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/sheets/idle_front.png": {
+      "category": "character_sheets",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        136,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/sheets/idle_back.png": {
+      "category": "character_sheets",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        136,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/sheets/idle_left.png": {
+      "category": "character_sheets",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        136,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/sheets/idle_right.png": {
+      "category": "character_sheets",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        136,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/sheets/walk_front.png": {
+      "category": "character_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/sheets/walk_back.png": {
+      "category": "character_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/sheets/walk_left.png": {
+      "category": "character_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "characters/female_cat/sheets/walk_right.png": {
+      "category": "character_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "bombs/bomb_idle.png": {
+      "category": "bombs",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        104,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "bombs/bomb_tick_1.png": {
+      "category": "bombs",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        104,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "bombs/bomb_tick_2.png": {
+      "category": "bombs",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        116,
+        132
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "bombs/bomb_tick_red.png": {
+      "category": "bombs",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        104,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "bombs/bomb_about_to_explode.png": {
+      "category": "bombs",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        116,
+        132
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "bombs/bomb_with_fuse_spark.png": {
+      "category": "bombs",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        116,
+        132
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "bombs/bomb_smoke_start.png": {
+      "category": "bombs",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        104,
+        108
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "bombs/bomb_shadow.png": {
+      "category": "bombs",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        84,
+        44
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "bombs/bomb_tick_sheet.png": {
+      "category": "bombs",
+      "logical_size": [
+        160,
+        32
+      ],
+      "pixel_size": [
+        648,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "explosions/explosion_center.png": {
+      "category": "explosions",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        140,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "explosions/explosion_horizontal.png": {
+      "category": "explosions",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        144,
+        60
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "explosions/explosion_vertical.png": {
+      "category": "explosions",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        64,
+        144
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "explosions/explosion_end_up.png": {
+      "category": "explosions",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        92,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "explosions/explosion_end_down.png": {
+      "category": "explosions",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        96,
+        144
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "explosions/explosion_end_left.png": {
+      "category": "explosions",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        140,
+        92
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "explosions/explosion_end_right.png": {
+      "category": "explosions",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        148,
+        92
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "explosions/explosion_start_flash.png": {
+      "category": "explosions",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        140,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "explosions/explosion_smoke_1.png": {
+      "category": "explosions",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        104
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "explosions/explosion_smoke_2.png": {
+      "category": "explosions",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        108
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "explosions/destroyed_block_debris_1.png": {
+      "category": "explosions",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        108
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "explosions/destroyed_block_debris_2.png": {
+      "category": "explosions",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        100
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "explosions/explosion_cross_sheet.png": {
+      "category": "explosions",
+      "logical_size": [
+        320,
+        32
+      ],
+      "pixel_size": [
+        1288,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/frames/idle_front.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        116,
+        108
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/frames/idle_back.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        116,
+        112
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/frames/idle_left.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        116,
+        108
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/frames/idle_right.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        116,
+        108
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/frames/move_front_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        116,
+        112
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/frames/move_front_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        116,
+        104
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/frames/move_back_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        116,
+        112
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/frames/move_back_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        116,
+        112
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/frames/move_left_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        116,
+        112
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/frames/move_left_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        116,
+        104
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/frames/move_right_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        116,
+        112
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/frames/move_right_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        116,
+        104
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/frames/attack.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        128,
+        108
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/frames/hurt.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        144,
+        148
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/frames/defeated.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/sheets/move_front.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/sheets/move_back.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/sheets/move_left.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/sheets/move_right.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/sheets/hurt.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        64,
+        32
+      ],
+      "pixel_size": [
+        264,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/slime/sheets/defeated.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        136,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/frames/idle_front.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        140,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/frames/idle_back.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        140,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/frames/idle_left.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        140,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/frames/idle_right.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        140,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/frames/fly_front_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        140,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/frames/fly_front_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        140,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/frames/fly_back_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        140,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/frames/fly_back_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        140,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/frames/fly_left_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        140,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/frames/fly_left_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        140,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/frames/fly_right_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        140,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/frames/fly_right_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        140,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/frames/attack.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        140,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/frames/hurt.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        144,
+        148
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/frames/defeated.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        140,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/sheets/move_front.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/sheets/move_back.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/sheets/move_left.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/sheets/move_right.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/sheets/hurt.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        64,
+        32
+      ],
+      "pixel_size": [
+        264,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/bat/sheets/defeated.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        136,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/frames/idle_front.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/frames/idle_back.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/frames/idle_left.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/frames/idle_right.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/frames/walk_front_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        144
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/frames/walk_front_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/frames/walk_back_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        144
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/frames/walk_back_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/frames/walk_left_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        144
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/frames/walk_left_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/frames/walk_right_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        144
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/frames/walk_right_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/frames/attack.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/frames/hurt.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        144,
+        148
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/frames/defeated.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/sheets/move_front.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/sheets/move_back.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/sheets/move_left.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/sheets/move_right.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/sheets/hurt.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        64,
+        32
+      ],
+      "pixel_size": [
+        264,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/robot/sheets/defeated.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        136,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/frames/idle_front.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/frames/idle_back.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/frames/idle_left.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/frames/idle_right.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/frames/float_front_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        128
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/frames/float_front_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/frames/float_back_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        128
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/frames/float_back_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/frames/float_left_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        128
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/frames/float_left_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/frames/float_right_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        128
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/frames/float_right_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/frames/attack.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/frames/hurt.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        144,
+        148
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/frames/defeated.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/sheets/move_front.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/sheets/move_back.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/sheets/move_left.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/sheets/move_right.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/sheets/hurt.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        64,
+        32
+      ],
+      "pixel_size": [
+        264,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ghost/sheets/defeated.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        136,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/frames/idle_front.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        132
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/frames/idle_back.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        132
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/frames/idle_left.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        132
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/frames/idle_right.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        132
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/frames/walk_front_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/frames/walk_front_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        128
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/frames/walk_back_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/frames/walk_back_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        128
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/frames/walk_left_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/frames/walk_left_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        128
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/frames/walk_right_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/frames/walk_right_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        128
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/frames/attack.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        132
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/frames/hurt.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        144,
+        148
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/frames/defeated.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/sheets/move_front.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/sheets/move_back.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/sheets/move_left.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/sheets/move_right.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/sheets/hurt.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        64,
+        32
+      ],
+      "pixel_size": [
+        264,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/fire_bug/sheets/defeated.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        136,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/frames/idle_front.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/frames/idle_back.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/frames/idle_left.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/frames/idle_right.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/frames/walk_front_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/frames/walk_front_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        116
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/frames/walk_back_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/frames/walk_back_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        116
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/frames/walk_left_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/frames/walk_left_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        116
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/frames/walk_right_1.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/frames/walk_right_2.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        116
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/frames/attack.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/frames/hurt.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        144,
+        148
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/frames/defeated.png": {
+      "category": "enemies",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/sheets/move_front.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/sheets/move_back.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/sheets/move_left.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/sheets/move_right.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        128,
+        32
+      ],
+      "pixel_size": [
+        520,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/sheets/hurt.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        64,
+        32
+      ],
+      "pixel_size": [
+        264,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "enemies/ice_turtle/sheets/defeated.png": {
+      "category": "enemy_sheets",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        136,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/grass_floor.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/stone_floor.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/sand_floor.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/ice_floor.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/wooden_floor.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/dark_dungeon_floor.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/lava_floor.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/water_floor.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/factory_floor.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/sky_cloud_floor.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/forest_floor.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/castle_floor.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/solid_stone_wall.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/solid_metal_wall.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/solid_ice_wall.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/solid_lava_wall.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/solid_dungeon_wall.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/solid_castle_wall.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/breakable_crate.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/breakable_brick.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/breakable_bush.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/breakable_ice_block.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/breakable_lava_rock.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/breakable_skull_block.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/breakable_barrel.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/cracked_wall.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/crate_debris_1.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/crate_debris_2.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/brick_debris_1.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/brick_debris_2.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/bush_debris_1.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/bush_debris_2.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/ice_debris_1.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "blocks/ice_debris_2.png": {
+      "category": "blocks",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/spike_trap_off.png": {
+      "category": "hazards",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/spike_trap_on.png": {
+      "category": "hazards",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/fire_trap_off.png": {
+      "category": "hazards",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/fire_trap_on.png": {
+      "category": "hazards",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/water_hole.png": {
+      "category": "hazards",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/slime_tile.png": {
+      "category": "hazards",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/electric_tile_off.png": {
+      "category": "hazards",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/electric_tile_on.png": {
+      "category": "hazards",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/falling_rock_idle.png": {
+      "category": "hazards",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/falling_rock_shadow.png": {
+      "category": "hazards",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/falling_rock_impact.png": {
+      "category": "hazards",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/lava_pool.png": {
+      "category": "hazards",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/ice_slide_tile.png": {
+      "category": "hazards",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/poison_gas_1.png": {
+      "category": "hazards",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/poison_gas_2.png": {
+      "category": "hazards",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/cracked_floor_safe.png": {
+      "category": "hazards",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/cracked_floor_breaking.png": {
+      "category": "hazards",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/cracked_floor_hole.png": {
+      "category": "hazards",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/spike_trap_sheet.png": {
+      "category": "hazards",
+      "logical_size": [
+        64,
+        32
+      ],
+      "pixel_size": [
+        264,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "hazards/fire_trap_sheet.png": {
+      "category": "hazards",
+      "logical_size": [
+        64,
+        32
+      ],
+      "pixel_size": [
+        264,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/one_way_arrow_up.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/one_way_arrow_down.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/one_way_arrow_left.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/one_way_arrow_right.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/conveyor_up.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/conveyor_down.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/conveyor_left.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/conveyor_right.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/speed_floor.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/slow_mud_floor.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/grass_border.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/desert_border.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/ice_border.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/dungeon_border.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/lava_border.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "tiles/factory_border.png": {
+      "category": "tiles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        152,
+        152
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "powerups/bomb_count_up.png": {
+      "category": "powerups",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        128
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "powerups/explosion_range_up.png": {
+      "category": "powerups",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "powerups/speed_up.png": {
+      "category": "powerups",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "powerups/shield.png": {
+      "category": "powerups",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        128
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "powerups/kick_bomb.png": {
+      "category": "powerups",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "powerups/remote_bomb.png": {
+      "category": "powerups",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "powerups/extra_life_heart.png": {
+      "category": "powerups",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "powerups/freeze_enemy.png": {
+      "category": "powerups",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "powerups/reveal_path.png": {
+      "category": "powerups",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "powerups/double_score_star.png": {
+      "category": "powerups",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "powerups/temporary_invincible.png": {
+      "category": "powerups",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "powerups/bomb_pass.png": {
+      "category": "powerups",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "powerups/wall_pass.png": {
+      "category": "powerups",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "powerups/fast_bomb_timer.png": {
+      "category": "powerups",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "powerups/slow_enemy.png": {
+      "category": "powerups",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "objects/red_button_off.png": {
+      "category": "objects",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "objects/red_button_on.png": {
+      "category": "objects",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "objects/blue_button_off.png": {
+      "category": "objects",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "objects/blue_button_on.png": {
+      "category": "objects",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "objects/yellow_button_off.png": {
+      "category": "objects",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "objects/yellow_button_on.png": {
+      "category": "objects",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "objects/door_closed.png": {
+      "category": "objects",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        88,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "objects/door_opening.png": {
+      "category": "objects",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        84,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "objects/door_open.png": {
+      "category": "objects",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        84,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "objects/locked_gate.png": {
+      "category": "objects",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        84,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "objects/key.png": {
+      "category": "objects",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        72
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "objects/golden_key.png": {
+      "category": "objects",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        72
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "objects/teleporter_blue.png": {
+      "category": "objects",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        100
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "objects/teleporter_blue_active.png": {
+      "category": "objects",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "objects/teleporter_pink.png": {
+      "category": "objects",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        100
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "objects/teleporter_pink_active.png": {
+      "category": "objects",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "objects/moving_platform.png": {
+      "category": "objects",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        116,
+        72
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "objects/exit_portal.png": {
+      "category": "objects",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        104,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "objects/meeting_goal_tile.png": {
+      "category": "objects",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        128
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "puzzle/pushable_box.png": {
+      "category": "puzzle",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        128,
+        128
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "puzzle/pushable_metal_box.png": {
+      "category": "puzzle",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        136,
+        136
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "puzzle/mirror_block.png": {
+      "category": "puzzle",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        96,
+        96
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "puzzle/laser_emitter_off.png": {
+      "category": "puzzle",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        68
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "puzzle/laser_emitter_on.png": {
+      "category": "puzzle",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        68
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "puzzle/laser_beam_horizontal.png": {
+      "category": "puzzle",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        144,
+        36
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "puzzle/laser_beam_vertical.png": {
+      "category": "puzzle",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        36,
+        144
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "puzzle/bridge_off.png": {
+      "category": "puzzle",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        96,
+        92
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "puzzle/bridge_on.png": {
+      "category": "puzzle",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        96,
+        92
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "puzzle/switch_lever_off.png": {
+      "category": "puzzle",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        80,
+        104
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "puzzle/switch_lever_on.png": {
+      "category": "puzzle",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        92,
+        104
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "puzzle/pressure_plate_off.png": {
+      "category": "puzzle",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        84
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "puzzle/pressure_plate_on.png": {
+      "category": "puzzle",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        84
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "puzzle/timer_switch.png": {
+      "category": "puzzle",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "puzzle/color_lock_red.png": {
+      "category": "puzzle",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        84,
+        108
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "puzzle/color_lock_blue.png": {
+      "category": "puzzle",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        84,
+        108
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "puzzle/color_lock_yellow.png": {
+      "category": "puzzle",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        84,
+        108
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "collectibles/coin.png": {
+      "category": "collectibles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        92,
+        96
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "collectibles/crystal.png": {
+      "category": "collectibles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        92,
+        116
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "collectibles/love_token.png": {
+      "category": "collectibles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        92,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "collectibles/small_fish.png": {
+      "category": "collectibles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        112,
+        80
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "collectibles/golden_fish.png": {
+      "category": "collectibles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        112,
+        80
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "collectibles/yarn_ball.png": {
+      "category": "collectibles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        104
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "collectibles/milk_bottle.png": {
+      "category": "collectibles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        84,
+        116
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "collectibles/gem_red.png": {
+      "category": "collectibles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        92,
+        116
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "collectibles/gem_blue.png": {
+      "category": "collectibles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        92,
+        116
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "collectibles/gem_green.png": {
+      "category": "collectibles",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        92,
+        116
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "stage_icons/stage_1_grass_icon.png": {
+      "category": "stage_icons",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "stage_icons/stage_2_desert_icon.png": {
+      "category": "stage_icons",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "stage_icons/stage_3_ice_icon.png": {
+      "category": "stage_icons",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "stage_icons/stage_4_forest_icon.png": {
+      "category": "stage_icons",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "stage_icons/stage_5_dungeon_icon.png": {
+      "category": "stage_icons",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "stage_icons/stage_6_lava_icon.png": {
+      "category": "stage_icons",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "stage_icons/stage_7_water_icon.png": {
+      "category": "stage_icons",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "stage_icons/stage_8_factory_icon.png": {
+      "category": "stage_icons",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "stage_icons/stage_9_sky_icon.png": {
+      "category": "stage_icons",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "stage_icons/stage_10_final_castle_icon.png": {
+      "category": "stage_icons",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        120
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/start_button.png": {
+      "category": "ui",
+      "logical_size": [
+        96,
+        32
+      ],
+      "pixel_size": [
+        384,
+        128
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/win_icon.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        116,
+        116
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/lose_icon.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        108
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/timer_icon.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        120,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/player_1_cat_icon.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/player_2_cat_icon.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        140
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/connection_icon.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        132,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/bomb_ui_icon.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/range_ui_icon.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        140,
+        144
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/heart_ui.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        124
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/small_arrow_up.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        144,
+        148
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/small_arrow_down.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        144,
+        148
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/small_arrow_left.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        144,
+        148
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/small_arrow_right.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        144,
+        148
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/pause_button.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        112
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/settings_gear.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        124,
+        128
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/online_signal_good.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        92,
+        96
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/online_signal_bad.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        92,
+        100
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/restart_icon.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        104
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/level_complete_badge.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        108,
+        92
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/locked_level_icon.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        84,
+        112
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/unlocked_level_icon.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        84,
+        112
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/star_rating_empty.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        100
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/star_rating_full.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        104
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/sound_on.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        100,
+        108
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    },
+    "ui/sound_off.png": {
+      "category": "ui",
+      "logical_size": [
+        32,
+        32
+      ],
+      "pixel_size": [
+        112,
+        104
+      ],
+      "style": "v3_studio_polish_local_pixel_art"
+    }
+  }
+}

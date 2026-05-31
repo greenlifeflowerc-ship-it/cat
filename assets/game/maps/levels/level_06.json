@@ -1,0 +1,53 @@
+{
+  "id": "level_06",
+  "name": "Lava Core",
+  "mode": "online_coop",
+  "objective": "Both cats start in opposite corners and must meet on the meeting goal tile.",
+  "grid_size": [
+    15,
+    13
+  ],
+  "tile_size": 128,
+  "legend": {
+    "#": "solid_wall",
+    "B": "breakable_block",
+    ".": "floor",
+    "1": "male_cat_spawn",
+    "2": "female_cat_spawn",
+    "M": "meeting_goal_tile",
+    "H": "hazard"
+  },
+  "spawn_male": [
+    1,
+    1
+  ],
+  "spawn_female": [
+    13,
+    11
+  ],
+  "meeting_goal": [
+    7,
+    6
+  ],
+  "layout": [
+    "###############",
+    "#1...B..B..B.B#",
+    "#.#B#B#.#.#B#B#",
+    "#BBBBB.BBB.BB.#",
+    "#B#B#B#B#B#B#B#",
+    "#BBB.BBBB..H.B#",
+    "#B#B#B#M#B#B#B#",
+    "#.BBB.BBBB.B.B#",
+    "#.#B#.#.#B#B#B#",
+    "#.BB.BHBBBBBBB#",
+    "#B#B#.#B#B#B#.#",
+    "#BBBBB..B....2#",
+    "###############"
+  ],
+  "recommended_assets": {
+    "floor": "tiles/dark_dungeon_floor.png",
+    "solid_wall": "blocks/solid_stone_wall.png",
+    "breakable_block": "blocks/breakable_crate.png",
+    "meeting_goal": "objects/meeting_goal_tile.png"
+  }
+}

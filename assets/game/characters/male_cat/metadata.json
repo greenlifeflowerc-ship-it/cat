@@ -1,0 +1,36 @@
+{
+  "id": "male_cat",
+  "display_name": "Male Cat",
+  "frame_size": [
+    128,
+    128
+  ],
+  "animations": {
+    "idle_front": "sheets/idle_front.png",
+    "idle_back": "sheets/idle_back.png",
+    "idle_left": "sheets/idle_left.png",
+    "idle_right": "sheets/idle_right.png",
+    "walk_front": "sheets/walk_front.png",
+    "walk_back": "sheets/walk_back.png",
+    "walk_left": "sheets/walk_left.png",
+    "walk_right": "sheets/walk_right.png"
+  },
+  "frames": {
+    "idle_front": "frames/idle_front.png",
+    "idle_back": "frames/idle_back.png",
+    "idle_left": "frames/idle_left.png",
+    "idle_right": "frames/idle_right.png",
+    "walk_front_1": "frames/walk_front_1.png",
+    "walk_front_2": "frames/walk_front_2.png",
+    "walk_back_1": "frames/walk_back_1.png",
+    "walk_back_2": "frames/walk_back_2.png",
+    "walk_left_1": "frames/walk_left_1.png",
+    "walk_left_2": "frames/walk_left_2.png",
+    "walk_right_1": "frames/walk_right_1.png",
+    "walk_right_2": "frames/walk_right_2.png",
+    "place_bomb": "frames/place_bomb.png",
+    "hurt": "frames/hurt.png",
+    "happy": "frames/happy.png",
+    "defeated": "frames/defeated.png"
+  }
+}

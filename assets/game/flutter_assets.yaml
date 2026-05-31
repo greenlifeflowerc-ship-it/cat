@@ -1,0 +1,18 @@
+# Add this under flutter: in pubspec.yaml
+# Keep indentation exactly like your pubspec.yaml file.
+flutter:
+  assets:
+    - cat_bomber_assets/characters/
+    - cat_bomber_assets/enemies/
+    - cat_bomber_assets/bombs/
+    - cat_bomber_assets/explosions/
+    - cat_bomber_assets/tiles/
+    - cat_bomber_assets/blocks/
+    - cat_bomber_assets/hazards/
+    - cat_bomber_assets/powerups/
+    - cat_bomber_assets/objects/
+    - cat_bomber_assets/puzzle/
+    - cat_bomber_assets/collectibles/
+    - cat_bomber_assets/stage_icons/
+    - cat_bomber_assets/ui/
+    - cat_bomber_assets/maps/
